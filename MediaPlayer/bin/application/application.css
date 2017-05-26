@@ -1,0 +1,68 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root{
+	-fx-background-color:grey;
+	-fx-background-image:url("../Image/albumsIcon.png");
+	-fx-background-repeat:no-repeat ;
+	-fx-background-size: 200 200;
+	-fx-background-position:center;
+	
+}
+
+.button{
+	-fx-background-color:transparent;
+}
+#play{
+	-fx-background-image:url("../Image/PlayIcon.png");
+	-fx-background-size: 30 30;
+	-fx-background-repeat:no-repeat ;
+	-fx-background-position:center ;
+	
+}
+#pause{
+	-fx-background-image:url("../Image/PauseIcon.png");
+	-fx-background-size: 30 30;
+	-fx-background-repeat:no-repeat ;
+	-fx-background-position:center ;
+	
+}
+#stop{
+	-fx-background-image:url("../Image/Shape-Square2.png");
+	-fx-background-size: 22 22;
+	-fx-background-repeat:no-repeat ;
+	-fx-background-position:center ;
+	
+}
+
+
+#fast{
+	-fx-background-image:url("../Image/ForwardIcon.png");
+	-fx-background-size: 30 30;
+	-fx-background-repeat:no-repeat ;
+	-fx-background-position:center ;
+	
+}
+#slow{
+	-fx-background-image:url("../Image/BackIcon.png");
+	-fx-background-size: 30 30;
+	-fx-background-repeat:no-repeat ;
+	-fx-background-position:center ;
+	
+}
+#reload{
+	-fx-background-image:url("../Image/LoopIcon.png");
+	-fx-background-size: 30 30;
+	-fx-background-repeat:no-repeat ;
+	-fx-background-position:center ;
+	
+}
+#open{
+	-fx-background-image:url("../Image/MenuIcon.png");
+	-fx-background-size: 30 30;
+	-fx-background-repeat:no-repeat ;
+	-fx-background-position:center ;
+	
+}
+
+
+
+
