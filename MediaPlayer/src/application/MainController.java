@@ -14,6 +14,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ListView;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
@@ -31,6 +32,8 @@ public class MainController implements Initializable {
 	@FXML
 	private MediaView mv;
 	private Media me;
+	@FXML
+	private ListView list;
 	
 	
 	private MediaPlayer mp;
@@ -40,13 +43,14 @@ public class MainController implements Initializable {
 	private void handleButtonAction(ActionEvent event)
 	{
 		FileChooser filechooser=new FileChooser();
-		FileChooser.ExtensionFilter filter=new FileChooser.ExtensionFilter("Select a file", "*.mp3");
+		FileChooser.ExtensionFilter filter=new FileChooser.ExtensionFilter("Select a file", "*.mp3","*.m4a","*.wav","*.mkv");
 		filechooser.getExtensionFilters().add(filter);
 		File file=filechooser.showOpenDialog(null);
 		filepath=file.toURI().toString();
 		if(filepath!=null){
+			list.getItems().add(file.getName());
 		Media me=new Media(filepath);
-		mp=new MediaPlayer(me );
+		mp=new MediaPlayer(me);
 		mv.setMediaPlayer(mp);
 		
 		slider.setValue(mp.getVolume()*100);
@@ -77,6 +81,8 @@ public class MainController implements Initializable {
 			}
 			
 		});
+		
+		
 		
 		mp.play();
 		
@@ -126,6 +132,7 @@ public class MainController implements Initializable {
 		mp.seek(mp.getStartTime());
 		mp.play();
 	}
+	
 	
 		
 	
