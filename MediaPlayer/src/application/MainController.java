@@ -50,7 +50,7 @@ public class MainController implements Initializable {
 		if(filepath!=null){
 			list.getItems().add(file.getName());
 			
-		if(curfilepath.isEmpty())
+		if(!(curfilepath!=null))
 		{
 			// Play the new file only if it is the first file being loaded
 			me=new Media(filepath);
